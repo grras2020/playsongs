@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <style>
+        div{
+            text-align: center;
+            margin-top: 25px;
+        }
+        div a{
+            background-color: coral;
+            color: rgb(129, 9, 129);
+            padding: 10px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        div p{
+            
+        }
+    </style>
+</head>
+<body>
+    <div><p><a onclick="play('ksong1.mp3')" title="1. Bekhayali - Arijit Singh Version" href="javascript:void(0);">1. Bekhayali - Arijit Singh Version</a></p></div>
+    <div><p><a onclick="play('ksong2.mp3')" href="javascript:void(0);">2. Bekhayali - Kabir Singh</a></p></div>
+    <div><p><a onclick="play('ksong3.mp3')" href="javascript:void(0);">3. Kaise Hua - Kabir Singh</a></p></div>
+    <div><p><a onclick="play('ksong4.mp3')" href="javascript:void(0);">4. Mere Sohneya - Kabir Singh</a></p></div>
+    <div><p><a onclick="play('ksong5.mp3')" href="javascript:void(0);">5. Pehla Pyaar - Kabir Singh</a></p></div>
+    <div><p><a onclick="play('ksong7.mp3')" href="javascript:void(0);">7. Tujhe Kitna Chahein Aur - Jubin</a></p></div>
+    <div><p><a onclick="play('ksong8.mp3')" href="javascript:void(0);">8. Tujhe Kitna Chahne Lage - Kabir Singh</a></p></div>
+    <div><p><a onclick="play('ksong9.mp3')" href="javascript:void(0);">9. Yeh Aaina - Kabir Singh</a></p></div>
+    
+    <div>
+        <audio id="audioplayer" src="song.m4a" controls></audio>
+    </div>
+
+    <!-- <iframe width="677" height="381" src="https://www.youtube.com/embed/5GU8fmkyy94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<br>
+<br>
+    <center><iframe  src="https://www.youtube.com/embed/5GU8fmkyy94" frameborder="0" width="320" height="240"></iframe></center>
+    <script>
+        var myPlayer = document.getElementById("audioplayer");
+        function play(song)
+        {
+            myPlayer.setAttribute('src','kabir_singh/'+song);
+            myPlayer.load();
+            myPlayer.volume = 0.2;
+            myPlayer.play();
+        }
+    </script>
+</body>
+</html>
